@@ -12,7 +12,8 @@ from tkinterdnd2 import DND_FILES, TkinterDnD
 class App(TkinterDnD.Tk, ctk.CTk):
     def __init__(self):
         # 両方の親クラスの __init__ を呼び出す
-        super().__init__() 
+        ctk.CTk.__init__(self)
+        TkinterDnD.Tk.__init__(self)
 
         self.title("SMAICRYPT")
         self.geometry("550x400") # 少し高さを広げます
